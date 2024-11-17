@@ -2,6 +2,7 @@ export { useBackButton, withBackButton } from './hooks-hocs/back-button.js';
 export { useBiometryManager, withBiometryManager } from './hooks-hocs/biometry-manager.js';
 export { useClosingBehavior, withClosingBehavior } from './hooks-hocs/closing-behavior.js';
 export { useCloudStorage, withCloudStorage } from './hooks-hocs/cloud-storage.js';
+export { useFullScreen, withFullScreen } from './hooks-hocs/full-screen.js';
 export { useHapticFeedback, withHapticFeedback } from './hooks-hocs/haptic-feedback.js';
 export { useInitData, withInitData } from './hooks-hocs/init-data.js';
 export { useInvoice, withInvoice } from './hooks-hocs/invoice.js';

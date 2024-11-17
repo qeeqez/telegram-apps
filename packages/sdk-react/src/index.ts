@@ -3,6 +3,7 @@ export * from './hooks-hocs/back-button.js';
 export * from './hooks-hocs/biometry-manager.js';
 export * from './hooks-hocs/closing-behavior.js';
 export * from './hooks-hocs/cloud-storage.js';
+export * from './hooks-hocs/full-screen.js';
 export * from './hooks-hocs/haptic-feedback.js';
 export * from './hooks-hocs/init-data.js';
 export * from './hooks-hocs/invoice.js';

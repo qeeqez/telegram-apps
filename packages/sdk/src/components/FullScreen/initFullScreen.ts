@@ -11,6 +11,18 @@ export const initFullScreen = createComponentInitFn(
   ({
     postEvent,
     state = { isFullScreen: true },
-    version
-  }) => new FullScreen(state.isFullScreen, version, postEvent),
+    version,
+    addCleanup
+  }) => {
+
+    // Otherwise, FullScreen instance will be created using zero values.
+    const fullScreen = new FullScreen(state.isFullScreen, version, postEvent);
+
+    // Listen to the viewport external changes and actualize local instance.
+    addCleanup(fullScreen.listen());
+    addCleanup(fullScreen.listen_error());
+
+    return fullScreen;
+  },
 );
+

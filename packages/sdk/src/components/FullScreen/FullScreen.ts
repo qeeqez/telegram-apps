@@ -37,7 +37,19 @@ export class FullScreen extends WithSupportsAndTrackableState<FullScreenState,
   listen(): RemoveEventListenerFn {
     return on('fullscreen_changed', (event) => {
       const {is_fullscreen} = event;
-      this.set({is_fullscreen})
+      this.set({isFullScreen: is_fullscreen});
+    });
+  };
+
+  /**
+   * Starts listening to fullscreen errors.
+   * @returns Function to stop listening.
+   */
+  listen_error(): RemoveEventListenerFn {
+    return on('fullscreen_failed', (event) => {
+      const {error} = event;
+      // TODO: handle error?
+      if (error === 'ALREADY_FULLSCREEN') return;
     });
   };
 

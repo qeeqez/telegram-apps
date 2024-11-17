@@ -91,6 +91,9 @@ export function supports(
       return versionLessOrEqual('7.2', paramOrVersion);
     case 'web_app_setup_swipe_behavior':
       return versionLessOrEqual('7.7', paramOrVersion);
+    case 'web_app_request_fullscreen':
+    case 'web_app_exit_fullscreen':
+      return versionLessOrEqual('8.0', paramOrVersion);
     default:
       return [
         'iframe_ready',

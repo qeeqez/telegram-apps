@@ -32,6 +32,8 @@ export class MiniApp extends WithSupportsAndTrackableState<
   | 'switchInlineQuery'
   | 'setHeaderColor'
   | 'setBackgroundColor'
+  | 'requestFullScreen'
+  | 'exitFullScreen'
 > {
   private readonly botInline: boolean;
 
@@ -50,6 +52,8 @@ export class MiniApp extends WithSupportsAndTrackableState<
       switchInlineQuery: 'web_app_switch_inline_query',
       setHeaderColor: 'web_app_set_header_color',
       setBackgroundColor: 'web_app_set_background_color',
+      requestFullScreen: 'web_app_request_fullscreen',
+      exitFullScreen: 'web_app_exit_fullscreen',
     });
 
     this.createRequestId = createRequestId;

@@ -76,6 +76,16 @@ export type {
 export { CloudStorage } from '@/components/CloudStorage/CloudStorage.js';
 export { initCloudStorage } from '@/components/CloudStorage/initCloudStorage.js';
 
+// FullScreen.
+export { FullScreen } from '@/components/FullScreen/FullScreen.js';
+export { initFullScreen } from '@/components/FullScreen/initFullScreen.js';
+export type {
+  FullScreenEventListener,
+  FullScreenEventName,
+  FullScreenEvents,
+  FullScreenState,
+} from '@/components/FullScreen/types.js';
+
 // HapticFeedback.
 export { HapticFeedback } from '@/components/HapticFeedback/HapticFeedback.js';
 export { initHapticFeedback } from '@/components/HapticFeedback/initHapticFeedback.js';

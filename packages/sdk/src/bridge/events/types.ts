@@ -21,6 +21,8 @@ export type BiometryTokenUpdateStatus = 'updated' | 'removed' | string;
 
 export type BiometryAuthRequestStatus = 'failed' | 'authorized' | string;
 
+export type FullScreenErrorStatus = 'ALREADY_FULLSCREEN' | string;
+
 /**
  * Map where key is known event name, and value is its listener.
  * @see https://docs.telegram-mini-apps.com/platform/events
@@ -131,6 +133,28 @@ export interface MiniAppsEvents {
      */
     error?: string;
   };
+  /**
+   * App entered or exited full screen mode.
+   * @since 8.0
+   * @see https://docs.telegram-mini-apps.com/platform/events#fullscreen-changed
+   */
+  fullscreen_changed: {
+    /**
+     * Is application currently fullscreen.
+     */
+    is_fullscreen: boolean;
+  }
+  /**
+   * App failed to expand to full screen.
+   * @since 8.0
+   * @see https://docs.telegram-mini-apps.com/platform/events#fullscreen-changed
+   */
+  fullscreen_failed: {
+    /**
+     * Full Screen mode status error.
+     */
+    error: FullScreenErrorStatus;
+  }
   /**
    * An invoice was closed.
    * @see https://docs.telegram-mini-apps.com/platform/events#invoice-closed
@@ -307,6 +331,7 @@ export type MiniAppsEventListener<E extends MiniAppsEventName> = EventListener<M
 export interface MiniAppsEventEmitter
   extends Pick<EventEmitter<MiniAppsEvents>, 'on' | 'off' | 'count'> {
   subscribe(listener: MiniAppsSubscribeListener): RemoveEventListenerFn;
+
   unsubscribe(listener: MiniAppsSubscribeListener): void;
 }
 

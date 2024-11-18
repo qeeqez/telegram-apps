@@ -1,5 +1,17 @@
 # @telegram-apps/sdk
 
+## 3.0.0
+
+### Major Changes
+
+- 7205f94: Bots API V8: Full Screen
+
+### Patch Changes
+
+- Updated dependencies [7205f94]
+  - @telegram-apps/bridge@2.0.0
+  - @telegram-apps/navigation@1.0.6
+
 ## 2.6.2
 
 ### Patch Changes

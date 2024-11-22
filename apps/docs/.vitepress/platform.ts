@@ -18,6 +18,7 @@ export const platformLinksGenerator = (prefix: string = "") => {
       section("Functional Features", {
         "Closing Behavior": "closing-behavior",
         "Swipe Behavior": "swipe-behavior",
+        "Safe Area": "safe-area",
         "Haptic Feedback": "haptic-feedback",
       }),
       section("Apps Communication", {
